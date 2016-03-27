@@ -11,8 +11,8 @@ run_cmd=""
 quiet="y"
 pacman_conf="/etc/pacman.conf"
 export iso_label="ARCH_$(date +%Y%m)"
-iso_publisher="Arch Linux <http://www.archlinux.org>"
-iso_application="Arch Linux Live/Rescue CD"
+iso_publisher="Xavier Loose <http://www.xavierloose.org>"
+iso_application="Modern Arch Linux ISO"
 install_dir="arch"
 work_dir="work"
 out_dir="out"
@@ -43,7 +43,7 @@ _msg_error() {
 
 _chroot_init() {
     mkdir -p ${work_dir}/airootfs
-    _pacman "base syslinux"
+    _pacman "base"
 }
 
 _chroot_run() {
